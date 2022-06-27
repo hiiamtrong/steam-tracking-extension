@@ -1,0 +1,27 @@
+{
+  "name": "Steam Tracking Price",
+  "version": "1.0",
+  "description": "Helps you track the price of a game on Steam",
+  "permissions": [],
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/logo/steam-16.png",
+      "32": "images/logo/steam-32.png",
+      "48": "images/logo/steam-48.png",
+      "128": "images/logo/steam-128.png"
+    },
+    "default_title": "Getting Started Example"
+  },
+  "icons": {
+    "16": "images/logo/steam-16.png",
+    "32": "images/logo/steam-32.png",
+    "48": "images/logo/steam-48.png",
+    "128": "images/logo/steam-128.png"
+  }
+}
