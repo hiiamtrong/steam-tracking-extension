@@ -13,7 +13,9 @@
   </div>
 
   <div id="header_right">
-    <img src={githubLogo} width="32px" alt="logo" href="" />
+    <a href="https://github.com/hiiamtrong/steam-tracking-extension" target="_blank">
+      <img src={githubLogo} width="32px" alt="logo" /></a
+    >
   </div>
 </div>
 
@@ -23,10 +25,13 @@
   #header {
     height: 50px;
 
+    background-color: #2a3f4d;
+    opacity: 0.9;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5em;
+    padding: 1em;
   }
 
   #header_left {

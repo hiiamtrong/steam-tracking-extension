@@ -1,18 +1,30 @@
-# Web Extension Svelte Boilerplate
+# Steam Tracking
 
 <div align="center">
-  <img width="300" src="https://user-images.githubusercontent.com/6290720/118286857-dce30580-b50d-11eb-93ec-27dee5fb870f.png" />
+  <img width="300" src="/public/images/logo/steam-128.png" />
   <br />
   <br />
 </div>
 
-This boilerplate using [Svelte](https://svelte.dev/) provides a skeleton to start developing cross-browser web extensions.
+This project using [Svelte boilerplate](https://github.com/davidnguyen179/web-extension-svelte-boilerplate) provides a skeleton to start developing cross-browser web extensions.
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![codecov](https://codecov.io/gh/davidnguyen179/web-extension-svelte-boilerplate/branch/main/graph/badge.svg?token=IKX2LE11LE)](https://codecov.io/gh/davidnguyen179/web-extension-svelte-boilerplate) ![ci/cd](https://github.com/davidnguyen179/web-extension-svelte-boilerplate/workflows/ci/cd/badge.svg) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/davidnguyen179/web-extension-svelte-boilerplate/pulls) [![MIT license](https://img.shields.io/github/license/davidnguyen179/web-extension-svelte-boilerplate)](https://github.com/davidnguyen179/web-extension-svelte-boilerplate/blob/main/LICENSE)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+  
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/hiiamtrong/steam-tracking-extension/blob/master/LICENSE)
+
+## Screenshots
+
+<div style="display:flex; flex-wrap: wrap;" align="center">
+  <img style="flex:1; margin:10px 10px;" src="public/images/readme/Screenshot from 2022-07-01 14-54-29.png">
+  <img style="flex:1;margin:10px 10px;" src="./public/images/readme/Screenshot from 2022-07-01 14-56-42.png">
+  <img style="flex:1;margin:10px 10px;" src="./public/images/readme/Screenshot from 2022-07-01 14-56-14.png">
+  <img  style="flex:1;margin:10px 10px;" src="./public/images/readme/about.gif">
+</div>
+
 ## Development
 
 ```bash
@@ -91,25 +103,6 @@ Check here for more detail: [https://developer.chrome.com/extensions/getstarted]
 
 Check here for more details: [https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 
-## How to keep devtool appears when developing
-
-Simple, just open chrome extension as a page. To do that, follow below steps:
-
-1. Open extension management page
-<img width="333" alt="Screen Shot 2021-05-27 at 14 44 56" src="https://user-images.githubusercontent.com/6290720/119772790-b011f380-befa-11eb-9ab2-f49c1858206b.png">
-
-2. Copy extension id
-
-<img width="712" alt="Screen Shot 2021-05-27 at 14 45 20" src="https://user-images.githubusercontent.com/6290720/119773037-0b43e600-befb-11eb-8887-1696816026d0.png">
-
-3. Open extension as a page `chrome-extension://<extension-id>/popup.html`
-
-- For example: [chrome-extension://npjcjlkchmiidojhockoecphakigbaej/popup.html](chrome-extension://npjcjlkchmiidojhockoecphakigbaej/popup.html)
-
-<img width="792" alt="chrome-extension://npjcjlkchmiidojhockoecphakigbaej/popup.html" src="https://user-images.githubusercontent.com/6290720/120733663-90925080-c522-11eb-8b92-8bc34def4333.png">
-
-
-
 ## Privacy Policy file
 
 Web stores require you to describe what the extension is or if you collect data of users. You also need to describe why you do that.
@@ -147,27 +140,13 @@ You can modify the `.github/workflows` to show the CI/CD flow.
 
 ## Most important
 
-Follow me on Twitter! https://twitter.com/davidnguyen1791
+Star this project on [Github](https://github.com/hiiamtrong/steam-tracking-extension)
 
 Thanks!
 
 ## License
 
 MIT
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://www.dzungnguyen.dev"><img src="https://avatars.githubusercontent.com/u/6290720?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Nguyen</b></sub></a><br /><a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/commits?author=davidnguyen179" title="Code">💻</a> <a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/commits?author=davidnguyen179" title="Documentation">📖</a> <a href="#design-davidnguyen179" title="Design">🎨</a> <a href="#ideas-davidnguyen179" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-davidnguyen179" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-davidnguyen179" title="Maintenance">🚧</a> <a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/pulls?q=is%3Apr+reviewed-by%3Adavidnguyen179" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/commits?author=davidnguyen179" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/conandk"><img src="https://avatars.githubusercontent.com/u/12934183?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DK</b></sub></a><br /><a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/commits?author=conandk" title="Code">💻</a> <a href="#ideas-conandk" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-conandk" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-conandk" title="Maintenance">🚧</a> <a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/pulls?q=is%3Apr+reviewed-by%3Aconandk" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/davidnguyen179/web-extension-svelte-boilerplate/commits?author=conandk" title="Tests">⚠️</a></td>
-  </tr>
-</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->

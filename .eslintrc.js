@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
-    module: true,
+    webextensions: true,
   },
   extends: [
     'eslint:recommended',
@@ -37,10 +37,11 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'no-console': 'error',
+    'no-console': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   ignorePatterns: ['*.config.js', 'jest.setup.js'],
   settings: {

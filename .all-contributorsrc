@@ -6,10 +6,10 @@
   "commit": false,
   "contributors": [
     {
-      "login": "davidnguyen179",
-      "name": "David Nguyen",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6290720?v=4",
-      "profile": "https://www.dzungnguyen.dev",
+      "login": "hiiamtrong",
+      "name": "Xuan Trong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54925853?s=48&v=4",
+      "profile": "https://github.com/hiiamtrong",
       "contributions": [
         "code",
         "doc",
@@ -20,25 +20,11 @@
         "review",
         "test"
       ]
-    },
-    {
-      "login": "conandk",
-      "name": "DK",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12934183?v=4",
-      "profile": "https://github.com/conandk",
-      "contributions": [
-        "code",
-        "ideas",
-        "infra",
-        "maintenance",
-        "review",
-        "test"
-      ]
     }
   ],
   "contributorsPerLine": 7,
-  "projectName": "web-extension-svelte-boilerplate",
-  "projectOwner": "davidnguyen179",
+  "projectName": "steam-tracking-extension",
+  "projectOwner": "hiiamtrong",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true

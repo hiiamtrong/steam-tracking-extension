@@ -76,15 +76,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidnguyen179/web-extension-svelte-boilerplate.git"
+    "url": "https://github.com/hiiamtrong/steam-tracking-extension.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidnguyen179/web-extension-svelte-boilerplate/issues"
+    "url": "https://github.com/hiiamtrong/steam-tracking-extension/issues"
   },
-  "homepage": "https://github.com/davidnguyen179/web-extension-svelte-boilerplate/blob/main/README.md",
+  "homepage": "https://github.com/hiiamtrong/steam-tracking-extension/blob/master/README.md",
   "funding": {
     "type": "individual",
-    "url": "https://paypal.me/davidnguyen179"
+    "url": "https://www.buymeacoffee.com/hiiamtrong"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.3",
+    "lodash": "^4.17.21"
   }
 }
