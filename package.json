@@ -1,7 +1,7 @@
 {
-  "name": "web-extension-svelte-boilerplate",
+  "name": "steam-tracking-extension",
   "version": "1.0.0",
-  "description": "Web extension Svelte boilerplate",
+  "description": "Helps you track the price of a game on Steam",
   "scripts": {
     "code:lint": "eslint '**/**/*.{ts,tsx,svelte}'",
     "code:lint-fix": "eslint --fix '**/**/*.{ts,tsx,svelte}'",
