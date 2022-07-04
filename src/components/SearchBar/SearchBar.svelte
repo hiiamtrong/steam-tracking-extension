@@ -1,9 +1,8 @@
 <script>
   import { debounce } from 'lodash';
   import { onMount } from 'svelte';
-  import { changeSearchString, searchString } from '../../../store/game_detail.store';
+  import { changeSearchString, getGames, searchString } from '../../../store/game_detail.store';
   // your script goes here
-  const searchLogo = 'images/logo/search.png';
 
   let searchInput = '';
   let searchStringValue = '';
@@ -19,15 +18,25 @@
   const search = debounce(() => {
     if (searchInput.trim() !== searchStringValue) {
       changeSearchString(searchInput);
+      getGames();
     }
   }, 1000);
+
+  function clearSearch() {
+    searchInput = '';
+    changeSearchString('');
+    getGames();
+  }
 </script>
 
 <div id="search-box">
   <input id="search_input" placeholder="Search" bind:value={searchInput} on:input={search} />
-  <button id="search_button">
-    <img src={searchLogo} width="20px" alt="search logo" />
-  </button>
+  {#if searchInput.trim()}
+    <!-- content here -->
+    <button id="search_button">
+      <span class="material-symbols-outlined" style="color: white;" on:click={clearSearch}> close </span>
+    </button>
+  {/if}
 </div>
 
 <!-- markup (zero or more items) goes here -->
@@ -53,6 +62,7 @@
     background-color: #316282;
     height: 33;
     border: 1px solid #3a7398;
+    cursor: pointer;
   }
 
   #search_input::placeholder {

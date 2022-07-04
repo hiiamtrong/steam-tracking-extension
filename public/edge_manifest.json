@@ -2,7 +2,7 @@
   "name": "Steam Tracking Price",
   "version": "1.0",
   "description": "Helps you track the price of a game on Steam",
-  "permissions": ["declarativeContent"],
+  "permissions": ["declarativeContent", "storage"],
   "manifest_version": 2,
   "background": {
     "content_scripts": "background.js"

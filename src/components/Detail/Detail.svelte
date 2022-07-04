@@ -9,7 +9,7 @@
   import TagGame from '../GameItem/TagGame.svelte';
   import Loading from '../Loading/loading.svelte';
   import './Detail.css';
-  import { config } from '../../lib/config';
+  import { config } from '../../config/config';
   // your script goes here
 
   let game: IGame;
@@ -203,7 +203,7 @@
           <hr />
         {/if}
 
-        {#if !isEmpty(game.support_info)}
+        {#if !isEmpty(game.support_info) && (game.support_info.url || game.support_info.email)}
           <!-- content here -->
           <div class="game_detail_item_title">Support: &nbsp;</div>
           <div class="game_detail_support_info">

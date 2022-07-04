@@ -1,11 +1,12 @@
 <script>
   import { get } from 'svelte/store';
-  import { changeSortBy, changeSortOrder, sortBy, sortOrder } from '../../../store/game_detail.store';
+  import { changeSortBy, changeSortOrder, getGames, sortBy, sortOrder } from '../../../store/game_detail.store';
 
   // your script goes here
 
   const onChangeSort = () => {
     changeSortBy(sortByValue);
+    getGames();
   };
 
   let sortByValue;
@@ -31,7 +32,13 @@
     <option value="metacritic"> Metacritic </option>
   </select>
 
-  <button class="sort_btn" on:click={() => changeSortOrder(-get(sortOrder))}>
+  <button
+    class="sort_btn"
+    on:click={() => {
+      changeSortOrder(-get(sortOrder));
+      getGames();
+    }}
+  >
     {#if sortOrderValue == 1}
       <span class="material-symbols-outlined" style="color: white;font-size: 15px;">north</span>
     {:else}

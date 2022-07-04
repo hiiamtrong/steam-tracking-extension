@@ -12,7 +12,7 @@
   }
 </script>
 
-<div class="game_item" on:click={onCick}>
+<div class="game_item" on:click={onCick} id={`game_${game.steam_appid}`}>
   <div class="game_item_left">
     <img class="game_image" src={game.header_image} alt={'image'} />
   </div>

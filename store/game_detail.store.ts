@@ -2,7 +2,8 @@ import axios from 'axios';
 import { writable, get } from 'svelte/store';
 import type { IGame } from '../src/type/index.type';
 import { uniqBy } from 'lodash';
-import { config } from '../src/lib/config';
+import Helper from '../src/lib/helper';
+import { config } from '../src/config/config';
 
 export const games = writable<IGame[]>([]);
 
@@ -15,10 +16,6 @@ export const sortBy = writable<string>('discount');
 export const sortOrder = writable<number>(-1);
 
 export const loading = writable<boolean>(false);
-
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
 export const getGames = async () => {
   try {
@@ -37,10 +34,11 @@ export const getGames = async () => {
     }
 
     const { data } = await axios.get(url);
-    await delay(1);
+    await Helper.delay(1);
     games.update((current) => {
       return uniqBy([...current, ...data], 'steam_appid');
     });
+
     page.update((current) => current + 1);
   } catch (error) {
     console.log(error);
@@ -56,24 +54,23 @@ export const changeSearchString = (currentSearch: string) => {
   games.set([]);
 
   page.set(0);
-
-  getGames();
 };
 
-export const changeSortBy = (currentSortBy: string) => {
+export const changeSortBy = (currentSortBy: string, clean: boolean = true) => {
   sortBy.set(currentSortBy);
+  chrome.storage.local.set({ sort_by: currentSortBy });
 
-  games.set([]);
-
-  page.set(0);
-  getGames();
+  if (clean) {
+    games.set([]);
+    page.set(0);
+  }
 };
 
-export const changeSortOrder = (currentSortOrder: number) => {
+export const changeSortOrder = (currentSortOrder: number, clean: boolean = true) => {
   sortOrder.set(currentSortOrder);
-
-  games.set([]);
-
-  page.set(0);
-  getGames();
+  chrome.storage.local.set({ sort_order: currentSortOrder });
+  if (clean) {
+    games.set([]);
+    page.set(0);
+  }
 };
