@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from 'svelte';
 
-  import axios from 'axios';
   import { get, isEmpty } from 'lodash';
   import { params, setRoute } from '../../../store/routing.store';
   import type { IGame } from '../../type/index.type';
@@ -41,7 +40,10 @@
   onMount(async () => {
     try {
       loading = true;
-      const { data } = await axios.get(`${config.SERVER_URL}/game_detail/${get($params, 'gameId')}`);
+      const res = await fetch(`${config.SERVER_URL}/game_detail/${get($params, 'gameId')}`, {
+        method: 'GET',
+      });
+      const data = await res.json();
       game = data;
       if (game.background && divDetail) {
         divDetail.style.backgroundImage = `url(${game.background})`;

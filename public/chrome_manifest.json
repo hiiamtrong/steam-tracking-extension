@@ -1,8 +1,8 @@
 {
-  "name": "Steam Tracking Price",
+  "name": "Steam Tracking",
   "version": "1.0",
-  "description": "Helps you track the price of a game on Steam",
-  "permissions": ["declarativeContent", "storage"],
+  "description": "Help you track the information of games on Steam",
+  "permissions": ["declarativeContent", "storage", "tabs"],
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"

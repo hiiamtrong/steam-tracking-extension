@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { writable, get } from 'svelte/store';
 import type { IGame } from '../src/type/index.type';
 import { uniqBy } from 'lodash';
@@ -33,7 +32,10 @@ export const getGames = async () => {
       url += `&query=${get(searchString)}`;
     }
 
-    const { data } = await axios.get(url);
+    const res = await fetch(url, {
+      method: 'GET',
+    });
+    const data = await res.json();
     await Helper.delay(1);
     games.update((current) => {
       return uniqBy([...current, ...data], 'steam_appid');
