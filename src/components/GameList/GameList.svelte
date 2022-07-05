@@ -21,9 +21,6 @@
       if (result.sort_order) {
         changeSortOrder(result.sort_order, false);
       }
-      await getGames();
-
-      await Helper.delay(1);
       if ($params['gameId']) {
         const el = document.getElementById(`game_${$params['gameId']}`);
 
@@ -31,6 +28,8 @@
 
         el.scrollIntoView({ behavior: 'smooth' });
       }
+      await Helper.delay(1);
+      await getGames();
     });
   });
 
