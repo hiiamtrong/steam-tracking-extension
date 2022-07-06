@@ -2,7 +2,7 @@
   "name": "Steam Tracking",
   "version": "1.0",
   "description": "Help you track the information of games on Steam",
-  "permissions": ["declarativeContent", "storage", "tabs"],
+  "permissions": ["declarativeContent", "storage"],
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"

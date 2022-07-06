@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onDestroy, onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
   import { get, isEmpty } from 'lodash';
   import { params, setRoute } from '../../../store/routing.store';
@@ -16,22 +16,6 @@
   let loading;
   let chosenScreenshot;
   let steamLink;
-
-  const clickLink = (e: MouseEvent) => {
-    const a = e.target.closest('a[href]');
-    if (a) {
-      e.preventDefault();
-      chrome.tabs.create({ url: a.href, active: false });
-    }
-  };
-
-  onMount(() => {
-    document.addEventListener('click', clickLink);
-  });
-
-  onDestroy(() => {
-    document.removeEventListener('click', clickLink);
-  });
 
   function onClick() {
     setRoute('/');
