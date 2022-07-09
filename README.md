@@ -19,10 +19,10 @@ This project using [Svelte boilerplate](https://github.com/davidnguyen179/web-ex
 ## Screenshots
 
 <div style="display:flex; flex-wrap: wrap;" align="center">
-  <img style="flex:1; margin:10px 10px;" src="public/images/readme/Screenshot from 2022-07-01 14-54-29.png">
-  <img style="flex:1;margin:10px 10px;" src="./public/images/readme/Screenshot from 2022-07-01 14-56-42.png">
-  <img style="flex:1;margin:10px 10px;" src="./public/images/readme/Screenshot from 2022-07-01 14-56-14.png">
-  <img  style="flex:1;margin:10px 10px;" src="./public/images/readme/about.gif">
+  <img style="flex:1; margin:10px 10px;"src="https://i.ibb.co/0h86Z2x/about.gif" alt="about" border="0">
+  <img style="flex:1;margin:10px 10px;" src="https://i.ibb.co/dQRDgx0/Screenshot-from-2022-07-01-14-54-29.png" alt="Screenshot-from-2022-07-01-14-54-29" border="0" >
+  <img style="flex:1;margin:10px 10px;"src="https://i.ibb.co/bRbLgZZ/Screenshot-from-2022-07-01-14-56-42.png" alt="Screenshot-from-2022-07-01-14-56-42" border="0">
+  <img  style="flex:1;margin:10px 10px;" src="https://i.ibb.co/FgWJ7vb/Screenshot-from-2022-07-01-14-56-14.png" alt="Screenshot-from-2022-07-01-14-56-14" border="0">
 </div>
 
 ## Development

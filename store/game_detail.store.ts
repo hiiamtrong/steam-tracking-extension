@@ -16,9 +16,14 @@ export const sortOrder = writable<number>(-1);
 
 export const loading = writable<boolean>(false);
 
+export const hashMap = writable<{ [key: string]: boolean }>({});
 export const getGames = async () => {
   try {
     if (get(loading)) {
+      return;
+    }
+
+    if (get(hashMap)[get(page)]) {
       return;
     }
 
@@ -36,12 +41,17 @@ export const getGames = async () => {
       method: 'GET',
     });
     const data = await res.json();
-    await Helper.delay(1);
-    games.update((current) => {
-      return uniqBy([...current, ...data], 'steam_appid');
+    hashMap.update((current) => {
+      return { ...current, [get(page)]: true };
     });
 
-    page.update((current) => current + 1);
+    if (data.length) {
+      await Helper.delay(1);
+      games.update((current) => {
+        return uniqBy([...current, ...data], 'steam_appid');
+      });
+      page.update((current) => current + 1);
+    }
   } catch (error) {
     console.log(error);
   } finally {
@@ -54,6 +64,7 @@ export const changeSearchString = (currentSearch: string) => {
   searchString.set(currentSearch);
 
   games.set([]);
+  hashMap.set({});
 
   page.set(0);
 };
@@ -64,6 +75,7 @@ export const changeSortBy = (currentSortBy: string, clean: boolean = true) => {
 
   if (clean) {
     games.set([]);
+    hashMap.set({});
     page.set(0);
   }
 };
@@ -73,6 +85,7 @@ export const changeSortOrder = (currentSortOrder: number, clean: boolean = true)
   chrome.storage.local.set({ sort_order: currentSortOrder });
   if (clean) {
     games.set([]);
+    hashMap.set({});
     page.set(0);
   }
 };

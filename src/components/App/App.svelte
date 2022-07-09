@@ -24,7 +24,7 @@
   .root {
     position: relative;
     height: 600px;
-    width: 350px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     background: rgb(42, 71, 94);

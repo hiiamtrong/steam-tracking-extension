@@ -13,6 +13,10 @@
   </div>
 
   <div id="header_right">
+    <a href={`chrome-extension://${chrome.runtime.id}/popup.html`} target="_blank" style="margin-right: 5px;">
+      <span class="material-symbols-outlined" style="color: #9b9898; font-size: 32px;"> open_in_full </span>
+    </a>
+
     <a href="https://github.com/hiiamtrong/steam-tracking-extension" target="_blank">
       <img src={githubLogo} width="32px" alt="logo" /></a
     >
