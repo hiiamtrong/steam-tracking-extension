@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  import { get, isEmpty } from 'lodash';
+  import { get, isEmpty, join } from 'lodash';
   import { params, setRoute } from '../../../store/routing.store';
   import type { IGame } from '../../type/index.type';
   import Platforms from '../GameItem/Platforms.svelte';
@@ -71,7 +71,7 @@
           <div class="info">
             <div class="game_detail_item_title">Developers: &nbsp;</div>
             <div class="game_detail_developer_content">
-              {game.developers.join(', ')}
+              {join(game.developers, ', ')}
             </div>
           </div>
         {/if}
@@ -81,7 +81,7 @@
           <div class="info">
             <div class="game_detail_item_title">Publishers: &nbsp;</div>
             <div class="game_detail_publisher_content">
-              {game.developers.join(', ')}
+              {join(game.developers, ', ')}
             </div>
           </div>
         {/if}
